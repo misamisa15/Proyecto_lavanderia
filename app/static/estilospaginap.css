@@ -1,0 +1,19 @@
+.icon-card {
+    border: 1px solid #0c3679;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .icon-card:hover {
+    transform: scale(1.05);
+    background-color: rgb(167, 215, 235);
+  }
+  .icon-card i {
+    font-size: 2.5rem;
+    color: #631414;
+  }
+  .icon-card p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
