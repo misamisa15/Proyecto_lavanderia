@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Página Principal{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilouser.css') }}">
+{% endblock %}
+{% block content %}
+    
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            {% for item in menu %}
+          <a class="nav-link" href="#">{{item.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <div id="carrusel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for itemimg in ima %}
+            <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                <img src="{{ url_for('static', filename=itemimg.image) }}" class="d-block w-100 carousel-image" alt="Imagen de carrusel {{ loop.index }}">
+            </div>
+            {% endfor %}
+        
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="contcolor text-white text-center d-flex justify-content-center align-items-center">
+        <h1>Lavados de autos desde $2</h1>
+    </div>
+
+    <div class="container my-4 ">
+        <h4>Bienvenidos Amiguitos</h4>
+    </div>
+{% endblock %}    

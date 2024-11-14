@@ -1,0 +1,10 @@
+.carousel-image {
+    min-height: 300px;
+    height: 55vh; /* Ajusta la altura según necesites */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste bien sin distorsión */
+}
+.contcolor{
+    background-color: rgb(12, 12, 122);
+    height: 30vh;
+
+}
