@@ -29,7 +29,9 @@ def paguser():
     ima = [
         
         {'image': 'images/car3.jpg'},
-        {'image': 'images/car4.jpg'}
+        {'image': 'images/logo_lava.jpg'},
+        {'image': 'images/car4.jpg'},
+        {'image': 'images/publi_lava.jpg'}
     ]
 
 
