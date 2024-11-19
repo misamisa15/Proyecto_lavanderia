@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-4">Gestión de Clientes</h2>
+
+        <!-- Formulario para agregar un nuevo cliente -->
+        <form method="POST">
+            <div class="mb-3">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" class="form-control" id="cedula" name="cedula" required>
+            </div>
+            <div class="mb-3">
+                <label for="nombres" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="nombres" name="nombres" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Número de Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+        </form>
+
+        <h3 class="my-4">Lista de Clientes</h3>
+        <ul class="list-group">
+            {% for cliente in clientes %}
+                <li class="list-group-item">
+                    <strong>{{ cliente.nombres }}</strong> (Cédula: {{ cliente.cedula }}) - Tel: {{ cliente.telefono }} - Correo: {{ cliente.correo }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

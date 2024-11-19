@@ -8,8 +8,8 @@
 {% block content %}
     
     <ul class="nav justify-content-center">
+        {% for item in menu %}
         <li class="nav-item">
-            {% for item in menu %}
           <a class="nav-link" href="#">{{item.text}}</a>
         </li>
         {% endfor %}
