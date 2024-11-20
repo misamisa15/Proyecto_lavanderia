@@ -29,7 +29,9 @@ def paguser():
     ima = [
         
         {'image': 'images/car3.jpg'},
-        {'image': 'images/car4.jpg'}
+        {'image': 'images/logo_lava.jpg'},
+        {'image': 'images/car4.jpg'},
+        {'image': 'images/publi_lava.jpg'}
     ]
 
 
@@ -78,4 +80,4 @@ def clientes():
         return redirect(url_for('clientes'))
     
     # Renderizar la plantilla de clientes
-    return render_template('clientes.html', clientes=clientes)
+    return render_template('cliente.html', clientes=clientes)
