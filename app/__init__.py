@@ -1,10 +1,13 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-
-    # Importa y registra las rutas
+   
+    
     with app.app_context():
+        # Registrar rutas
         from . import routes
-
-    return app
+        return app
