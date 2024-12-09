@@ -20,22 +20,41 @@ def index():
 @app.route('/pagina_user.html')
 def paguser():
     menu = [
-        {'text': 'Inicio'},
-        {'text': 'Turnos'},
+        {'text': 'Inicio','link':'/pagina_user'},
+        {'text': 'Turnos', 'link': '/turnos'},
         {'text': 'Servicios'},
         {'text': 'Compras'},
         {'text': 'Facturas'}
     ]
     ima = [
         
-        {'image': 'images/car3.jpg'},
         {'image': 'images/logo_lava.jpg'},
-        {'image': 'images/car4.jpg'},
+        {'image': 'images/imagen_horario_car.jpeg'},
         {'image': 'images/publi_lava.jpg'}
     ]
 
 
     return render_template('pagina_user.html',menu=menu, ima=ima)
+
+
+@app.route('/turnos.html')
+def pagturnos():
+    menu = [
+        {'text': 'Inicio','link':'/pagina_user'},
+        {'text': 'Turnos', 'link': '/turnos'},
+        {'text': 'Servicios'},
+        {'text': 'Compras'},
+        {'text': 'Facturas'}
+    ]
+    ima = [
+        
+        {'image': 'images/logo_lava.jpg'},
+        {'image': 'images/imagen_horario_car.jpeg'},
+        {'image': 'images/publi_lava.jpg'}
+    ]
+
+
+    return render_template('turnos.html',menu=menu, ima=ima)
 
 products = [
     {'name': 'Producto 1', 'description': 'Descripción del Producto 1', 'price': 10.0},
